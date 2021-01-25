@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO</title>
+</head>
+<body>
+
+    <script>
+       class Animal{
+           constructor(nome, idade){
+               this.nome = nome;
+               this.idade = idade;
+           }
+
+           printNome(){
+               return this.nome;
+
+               // APESAR DE SER UMA FUNÇÃO EM POO É CHAMADO DE MÉTODO
+           }
+       }
+
+       // OBS: INSTANCIAR = CRIAR CLASSE, CRIAR OBJETO
+
+       animal = new Animal('Estopa', '3 anos');
+       animal2 = new Animal('Madona', '14 anos', 'teste');
+
+
+       console.log(animal.nome);
+       console.log(animal.idade);
+
+       console.log('--------------');
+
+       console.log(animal2.nome);
+       console.log(animal2.idade);
+
+       console.log(animal);
+
+       console.log(animal.printNome());
+
+
+       class Cachorro extends Animal {
+           constructor(nome){
+               super(nome);
+               this.raca = 'bulldog';
+
+                //o EXTENDS serve para dizer que tudo que eu declarar nessa nova classe ele irá HERDAR os elementos da CLASSE ANIMAL
+
+                //os parametros obrigatoriamente terão que ser os mesmos da classe pai, igual está no constructor abaixo
+           }
+
+           printRaca(){
+               return this.raca;
+           }
+
+       }
+
+       cachorro = new Cachorro('poodle');
+       
+       console.log(cachorro.printNome());
+
+       console.log(cachorro.printRaca());
+
+       /* outra forma de fazer
+         class Animal{
+           constructor(){
+               this.nome = 'cachorro';
+           }
+       }
+
+       // OBS: INSTANCIAR = CRIAR CLASSE, CRIAR OBJETO
+
+       animal = new Animal();
+
+
+       console.log(animal.nome);
+       */
+
+
+       //porém o jeito mais correto é o de cima, e feito de forma mais automatica, desta forma é mais 'manual';
+
+
+    </script>
+    
+</body>
+</html>

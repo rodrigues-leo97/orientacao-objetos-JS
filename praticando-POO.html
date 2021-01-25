@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO</title>
+</head>
+<body>
+
+    <script>
+           function Pessoa() {
+                this.nome = 'leonardo';  //a função THIS é uma variável usada para esse objeto em questão   
+                //em orientação a objetos basicamente se usa apenas o THIS        
+                //neste caso o correto é chamar de atributos 
+                this.idade = 27;
+                this.printNome = function(numero) {
+                    alert(numero);
+                }
+
+                this.returnAnimal = function(animal){
+                    return animal;
+                }
+           }
+
+
+           function Animal(){
+               this.nome = 'cachorro';
+               this.raca = 'tomba';
+           }
+           
+
+           var pessoa = new Pessoa();
+
+           var animal = new Animal();
+
+
+           console.log(pessoa.returnAnimal(animal).nome);
+           console.log(pessoa.returnAnimal(animal).raca);
+
+           animal.raca = 'bichon-frisé';
+           console.log(pessoa.returnAnimal(animal).raca);
+
+
+
+
+
+             /*function Animal(){
+               this.nome = 'cachorro';
+               this.peso = '12kg';
+           } */
+           //FORMA MAIS RÁPIDA E CORRETA DE ESCREVER A FUNCTION ACIMA
+
+          
+          /*
+           function Animal(nome, peso) {
+               if(nome == undefined){
+                   nome = 'cachorro';
+               }
+
+               if(peso == undefined){
+                   peso = '5kg';
+               }
+               this.nome = nome;
+               this.peso = peso;
+           }
+
+          animal = new Animal('gato', '12kg');
+          console.log(animal.nome);
+          console.log(animal.peso);
+          */
+
+      
+
+           /*
+
+           var pessoa = new Pessoa(); // criando um novo objeto usando a palavra NEW
+           //Pessoa se torna um valor acessível, e caso queira mudar basta declarar
+
+           var pessoa_2 = new Pessoa();
+
+           pessoa.printNome(pessoa.nome);
+
+           pessoa_2.nome = 'Paloma';
+
+           pessoa.printNome(pessoa_2.nome); 
+           */
+
+
+    </script>
+    
+</body>
+</html>

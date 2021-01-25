@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO</title>
+</head>
+<body>
+
+    <script>
+            //entender o que é um objeto
+
+            var pessoas = {
+                'nome': 'Leonardo',
+                'idade': 23,
+                'profissão': 'programador'
+            };
+
+            alert(pessoas.nome);
+
+            // CARREGA TODAS AS PROPRIEDADES QUE ALGO TERIA EM UM MUNDO REAL
+            //EX: UMA PESSOA TEM O NOME, IDADE E PROFISSÃO, IGUAL AO EXEMPLO ACIMA, BASTA SUBTITUIR A PALAVRA OBJETOS POR PESSOAS
+
+
+            //JUNTANDO ARRAY COM OBJETOS
+
+            var pessoas2 = [{
+                'nome': 'Paloma',
+                'idade': 27,
+                'profissão': 'programadora'
+            },
+
+            {
+                'nome': 'Leonardo',
+                'idade': 23,
+                'profissão': 'programador'
+            }
+            
+        ]; //tudo isso dentro de um objeto
+
+        //USANDO VETORES PODEMOS REPLICAR VARIAS VEZES
+
+        alert(pessoas2[0].nome);
+
+
+        var noticias = [{
+                'titulo': 'noticia 1',
+                'conteudo': 'texto da noticia',
+    
+            },
+
+            {
+                'titulo': 'noticia 2',
+                'conteudo': 'texto da noticia 2'
+            }
+            
+        ];
+
+        alert(noticias[1].titulo);
+
+    </script>
+    
+</body>
+</html>

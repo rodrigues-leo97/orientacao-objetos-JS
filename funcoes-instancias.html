@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO</title>
+</head>
+<body>
+
+    <script>
+           function Pessoa() {
+                this.nome = 'leonardo';  //a função THIS é uma variável usada para esse objeto em questão   
+                //em orientação a objetos basicamente se usa apenas o THIS        
+                //neste caso o correto é chamar de atributos 
+           }
+
+           var pessoa = new Pessoa(); // criando um novo objeto usando a palavra NEW
+
+           //Pessoa se torna um valor acessível, e caso queira mudar basta declarar
+
+           pessoa.nome = 'Leonardo';
+
+           alert(pessoa.nome);
+
+           pessoa.nome = 'Paloma';
+
+           alert(pessoa.nome);
+
+
+    </script>
+    
+</body>
+</html>
